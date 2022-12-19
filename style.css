@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #85c0ff;
+    --secondary-color: #f8f9fe;
+    --font-size: 18px;
+}
+
+::selection {
+    color: var(--secondary-color);
+    background: var(--primary-color);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    background: linear-gradient(135deg, var(--primary-color), #176ecb);
+}
+
+.currency-exchange {
+    width: 450px;
+    padding: 30px;
+    font-size: var(--font-size);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border-radius: 7px;
+    background: var(--secondary-color);
+    box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px,
+    rgba(0, 0, 0, 0.07) 0 2px 4px,
+    rgba(0, 0, 0, 0.07) 0 4px 8px,
+    rgba(0, 0, 0, 0.07) 0 8px 16px,
+    rgba(0, 0, 0, 0.07) 0 16px 32px,
+    rgba(0, 0, 0, 0.07) 0 32px 64px;
+}
+
+.currency-exchange header {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+}
+
+form :where(input, select) {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+form input {
+    height: 50px;
+    font-size: var(--font-size);
+    padding: 0 10px;
+    outline: 1px solid #999;
+    background-color: var(--secondary-color);
+}
+
+.select-box {
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    border-radius: 5px;
+    outline: 1px solid #999;
+}
+
+.select-box img {
+    width: 16px;
+}
+
+.select-box select {
+    width: auto;
+    font-size: var(--font-size);
+    background: none;
+    margin-right: -5px;
+    flex-grow: 1;
+}
+
+.icon {
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+
+.icon-active {
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    -ms-transition: -ms-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.select-box select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.select-box select::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+    border-right: 2px solid var(--secondary-color);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 var(--secondary-color);
+}
