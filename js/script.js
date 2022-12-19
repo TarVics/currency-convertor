@@ -169,9 +169,9 @@ class CurrencyConverter {
 
         this.#data.forEach(item => {
             this.fromSelectEl.appendChild(
-                this.#makeCurrencyItem(item.cc, item.txt, item.cc === 'UAH'))
-            this.toSelectEl.appendChild(
                 this.#makeCurrencyItem(item.cc, item.txt, item.cc === 'USD'))
+            this.toSelectEl.appendChild(
+                this.#makeCurrencyItem(item.cc, item.txt, item.cc === 'UAH'))
         })
 
         this.onSelectCurrencyChange(this.fromSelectEl);
